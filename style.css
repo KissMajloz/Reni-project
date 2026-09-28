@@ -450,6 +450,7 @@ main>section+section {
 	justify-content: center;
 	margin-top: 0.5rem;
 	padding: 0.8rem 1.35rem;
+	text-decoration: none;
 	transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
@@ -461,6 +462,7 @@ main>section+section {
 	border-color: #9a7438;
 	box-shadow: 0 0.5rem 1rem rgba(23, 50, 77, 0.24);
 	color: #fff;
+	text-decoration: none;
 	transform: translateY(-2px);
 }
 
