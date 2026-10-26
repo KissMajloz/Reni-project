@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Dr. László Renáta</title>
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b9f125d13.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom" aria-label="Fő navigáció">
+
+<body class="home-site">
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom" aria-label="Fő navigáció">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#kezdolap">Dr. László Renáta</a>
+            <a class="navbar-brand fw-bold" href="#kezdolap"><span class="brand-emblem" aria-hidden="true"></span><span>Dr. László Renáta</span></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#foNavigacio"
                 aria-controls="foNavigacio" aria-expanded="false" aria-label="Navigáció megnyitása">
@@ -18,78 +24,100 @@
             </button>
 
             <div class="collapse navbar-collapse" id="foNavigacio">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"><li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#kezdolap">Kezdőlap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="szakiranyok.html">Szakirányok</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="ar.html">Ár</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
-                    </li>
-                    <li class="nav-item">
+                    </li><li class="nav-item">
                         <a class="nav-link" href="rolam.html">Rólam</a>
-                    </li>
-                </ul>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="szakiranyok.html">Szakterületek</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="ar.html">Ár</a>
+                    </li><li class="nav-item">
+                        <a class="nav-link" href="kapcsolat.html">Kapcsolat</a>
+                    </li></ul>
             </div>
         </div>
     </nav>
+    <div class="site-contact-strip">
+        <div class="container site-contact-inner">
+            <span class="site-location">Székhely: Dunaújváros</span>
+            <div class="site-contact-links">
+                <a href="mailto:drlaszlorenata@gmail.com">drlaszlorenata@gmail.com</a>
+                <a href="tel:+36703261788">+36 70 326 1788</a>
+            </div>
+        </div>
+    </div>
 
-    <main id="kezdolap" class="container py-5">
-        <h1>Dr. László Renáta ügyvéd</h1>
-        <p class="lead">Dunaújvárosi ügyvédi irodámban magánszemélyek, vállalkozások és egyéb jogi személyek részére nyújtok precíz, személyre szabott és gyakorlatias jogi segítséget.</p>
+    <main id="kezdolap" class="home-page">
+        <section class="home-hero" aria-labelledby="kezdolap-cim">
+            <div class="container home-hero-inner">
+                <div class="home-hero-copy">
+                    <p class="home-kicker">Egyéni ügyvéd <span aria-hidden="true">·</span> Dunaújváros</p>
+                    <h1 id="kezdolap-cim">Dr. László Renáta <span>ügyvéd</span></h1>
+                    <p class="home-hero-lead">Dunaújvárosi ügyvédi irodámban magánszemélyek és jogi személyek részére nyújtok precíz, személyre szabott és gyakorlatias jogi segítséget.</p>
+                    <div class="home-hero-contact" aria-label="Elérhetőségek">
+                        <a href="mailto:drlaszlorenata@gmail.com"><span>E-mail</span>drlaszlorenata@gmail.com</a>
+                        <a href="tel:+36703261788"><span>Telefon</span>+36 70 326 1788</a>
+                    </div>
+                    <div class="home-hero-actions">
+                        <a class="btn btn-elegans" href="kapcsolat.html">Kapcsolatfelvétel</a>
+                        <a class="home-text-link" href="szakiranyok.html">Szakterületeim <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section id="rolam" class="rolam-elozetes mt-5 py-5 text-center" aria-labelledby="rolam-cim">
-            <h2 id="rolam-cim">Rólam</h2>
-            <p class="rolam-szoveg">Közel húsz év szakmai tapasztalattal kiemelt szakterületeim az ingatlanjog, a munkajog, a cégjog, valamint polgári jogi szerződések.</p>
-
-            <p class="rolam-szoveg rolam-szoveg-masodik">Munkám során kiemelten fontosnak tartom a precíz és körültekintő munkavégzést, az átláthatóságot és a közérthető kommunikációt, hogy ügyfeleim pontosan értsék az adott jogi helyzetet, a lehetőségeket és a kockázatokat. Hiszek abban, hogy a megfelelően előkészített jogi megoldás sok esetben későbbi problémákat és költségeket előzhet meg.</p>
-            <a class="btn btn-elegans" href="rolam.html">Bővebben</a>
+        <section id="rolam" class="home-about" aria-labelledby="rolam-cim">
+            <div class="container home-about-inner">
+                <div class="home-about-label">
+                    <p class="home-kicker">Szakértelem és odafigyelés</p>
+                    <h2 id="rolam-cim">Rólam</h2>
+                </div>
+                <div class="home-about-copy">
+                    <p class="home-about-intro">Közel húsz év szakmai tapasztalattal kiemelt szakterületeim az ingatlanjog, a munkajog, a cégjog, valamint polgári jogi szerződések.</p>
+                    <p>Munkám során kiemelten fontosnak tartom a precíz és körültekintő munkavégzést, az átláthatóságot és a közérthető kommunikációt, hogy ügyfeleim pontosan értsék az adott jogi helyzetet, a lehetőségeket és a kockázatokat. Hiszek abban, hogy a megfelelően előkészített jogi megoldás sok esetben későbbi problémákat és költségeket előzhet meg.</p>
+                    <a class="home-text-link" href="rolam.html">Bővebben rólam <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
         </section>
 
         <section id="szakiranyok" class="szakiranyok-elozetes py-5" aria-labelledby="szakiranyok-cim">
             <div class="szakiranyok-tartalom">
-                <h2 id="szakiranyok-cim" class="text-center">Szakirányok</h2>
-                <p class="szakiranyok-bevezeto text-center">Jogi segítség a legfontosabb élethelyzetekben és üzleti döntésekben.</p>
+                <h2 id="szakiranyok-cim" class="text-center">Szakterületek</h2>
+                <p class="szakiranyok-bevezeto text-center">Jogi segítség a legfontosabb élethelyzetekben és üzleti
+                    döntésekben.</p>
                 <div class="text-center mb-4">
-                    <a class="btn btn-elegans" href="szakiranyok.html">Minden szakirány megtekintése</a>
+                    <a class="btn btn-elegans" href="szakiranyok.html">Minden szakterület megtekintése</a>
                 </div>
 
-                <div class="szakiranyok-folyam" aria-label="Szakirányok folyamatos előnézete">
+                <div class="szakiranyok-folyam" aria-label="Szakterületek folyamatos előnézete">
                     <div class="szakiranyok-track">
                         <a class="szakirany-kartya" href="szakiranyok/ingatlanjog.html">
-                            <div class="szakirany-ikon" aria-hidden="true">⌂</div>
+                            <div class="szakirany-ikon" aria-hidden="true"><i class="fa-solid fa-house"></i></div>
                             <h3>Ingatlanjog</h3>
                         </a>
-                         <a class="szakirany-kartya" href="szakiranyok/vallalkozasok.html">
-                            <div class="szakirany-ikon" aria-hidden="true">▣</div>
-                            <h3>Vállalkozások teljeskörü jogi támogatása</h3>
-                        </a>
-                          <a class="szakirany-kartya" href="szakiranyok/cegjog.html">
-                            <div class="szakirany-ikon" aria-hidden="true">▤</div>
-                            <h3>Cégjog</h3>
+                        <a class="szakirany-kartya" href="szakiranyok/vallalkozasok.html">
+                            <div class="szakirany-ikon" aria-hidden="true"><i class="fa-solid fa-building-shield"></i></div>
+                            <h3>Cégalapítás, cégmódosítás, vállalkozások teljes körű jogi támogatása és cégképviselet</h3>
                         </a>
                         <a class="szakirany-kartya" href="szakiranyok/munkajog.html">
-                            <div class="szakirany-ikon" aria-hidden="true">⚖</div>
+                            <div class="szakirany-ikon" aria-hidden="true"><i class="fa-solid fa-briefcase"></i></div>
                             <h3>Munkajog</h3>
                         </a>
                         <a class="szakirany-kartya" href="szakiranyok/polgari-jog.html">
-                            <div class="szakirany-ikon" aria-hidden="true">§</div>
-                            <h3>Polgári jog</h3>
+                            <div class="szakirany-ikon" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <h3>Polgári jog és szerződések </h3>
                         </a>
                         <a class="szakirany-kartya" href="szakiranyok/koveteleskezeles.html">
-                            <div class="szakirany-ikon" aria-hidden="true">↗</div>
+                            <div class="szakirany-ikon" aria-hidden="true"><i class="fa-solid fa-sack-dollar"></i></div>
                             <h3> Követelés kezelés</h3>
                         </a>
                         <a class="szakirany-kartya" href="szakiranyok/civil-szervezetek.html">
-                            <div class="szakirany-ikon" aria-hidden="true">○</div>
+                            <div class="szakirany-ikon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></div>
                             <h3>Civil szervezetek ügyei</h3>
                         </a>
-                       
+
                     </div>
                 </div>
             </div>
@@ -103,15 +131,14 @@
                     <h2 id="terkep-cim">Irodám Dunaújvárosban</h2>
                     <p class="mb-0">Dr. László Renáta ügyvédi iroda</p>
                 </div>
-                <a class="terkep-hivatkozas" href="https://www.google.com/maps/search/?api=1&amp;query=Dr.+L%C3%A1szl%C3%B3+Ren%C3%A1ta+%C3%BCgyv%C3%A9d%2C+Duna%C3%BAjv%C3%A1ros" target="_blank" rel="noopener noreferrer">Megnyitás a Google Térképen</a>
+                <a class="terkep-hivatkozas"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=Dr.+L%C3%A1szl%C3%B3+Ren%C3%A1ta+%C3%BCgyv%C3%A9d%2C+Duna%C3%BAjv%C3%A1ros"
+                    target="_blank" rel="noopener noreferrer">Megnyitás a Google Térképen</a>
             </div>
-            <iframe
-                class="terkep-beagyazas"
+            <iframe class="terkep-beagyazas"
                 src="https://maps.google.com/maps?q=Dr.%20L%C3%A1szl%C3%B3%20Ren%C3%A1ta%20%C3%BCgyv%C3%A9d%2C%20Duna%C3%BAjv%C3%A1ros&amp;z=14&amp;output=embed"
-                title="Dr. László Renáta ügyvédi iroda térképe Dunaújvárosban"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                allowfullscreen>
+                title="Dr. László Renáta ügyvédi iroda térképe Dunaújvárosban" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
             </iframe>
         </div>
     </section>
@@ -121,19 +148,20 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <h2>Dr. László Renáta</h2>
-                    <p class="mb-0">Személyre szabott, megbízható jogi segítség magánszemélyek és vállalkozások számára.</p>
+                    <p class="mb-0">Személyre szabott, megbízható jogi segítség magánszemélyek és vállalkozások számára.
+                    </p>
                 </div>
                 <div class="col-md-3">
                     <h3>Menü</h3>
                     <a href="#kezdolap">Kezdőlap</a>
-                    <a href="szakiranyok.html">Szakirányok</a>
+                    <a href="szakiranyok.html">Szakterületek</a>
                     <a href="rolam.html">Rólam</a>
                 </div>
                 <div class="col-md-3">
                     <h3>Kapcsolat</h3>
                     <a href="kapcsolat.html">Kapcsolatfelvétel</a>
                     <a href="mailto:drlaszlorenata@gmail.com">drlaszlorenata@gmail.com</a>
-                    <a href="tel:+36-70/326-1788">+36 70 326 1788</a>
+                    <a href="tel:+36703261788">+36 70 326 1788</a>
                 </div>
             </div>
             <div class="oldal-footer-also mt-4 pt-3">
@@ -145,4 +173,5 @@
     <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

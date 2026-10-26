@@ -10,16 +10,4 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	const cardTrack = document.querySelector(".szakiranyok-track");
-	if (cardTrack) {
-		const cards = [...cardTrack.querySelectorAll(".szakirany-kartya")];
-
-		cards.forEach((card) => {
-			const duplicate = card.cloneNode(true);
-			duplicate.setAttribute("aria-hidden", "true");
-			duplicate.removeAttribute("href");
-			duplicate.setAttribute("tabindex", "-1");
-			cardTrack.appendChild(duplicate);
-		});
-	}
 });

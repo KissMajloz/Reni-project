@@ -64,13 +64,13 @@ body {
 	box-shadow: 0 0 0 0.2rem rgba(179, 139, 69, 0.25);
 }
 
-main > section {
+main>section {
 	border-top: 3px solid var(--gold);
 	margin-top: 4rem;
 	width: 100%;
 }
 
-main > section + section {
+main>section+section {
 	margin-top: 3rem;
 }
 
@@ -96,7 +96,6 @@ main > section + section {
 	font-size: 1.35rem;
 	font-weight: 500;
 	max-width: 860px;
-	text-align: left;
 }
 
 .szakiranyok-elozetes {
@@ -140,7 +139,7 @@ main > section + section {
 	margin-bottom: 1rem;
 }
 
-.ingatlan-oldal > section {
+.ingatlan-oldal>section {
 	border: 0;
 	margin: 0;
 }
@@ -175,7 +174,7 @@ main > section + section {
 	max-width: 820px;
 }
 
-.ingatlan-hero-tartalom > p:last-child {
+.ingatlan-hero-tartalom>p:last-child {
 	line-height: 1.8;
 	max-width: 820px;
 }
@@ -405,6 +404,7 @@ main > section + section {
 	from {
 		transform: translateX(0);
 	}
+
 	to {
 		transform: translateX(-50%);
 	}
@@ -450,14 +450,11 @@ main > section + section {
 	justify-content: center;
 	margin-top: 0.5rem;
 	padding: 0.8rem 1.35rem;
+	text-decoration: none;
 	transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.btn-elegans::after {
-	content: "->";
-	font-size: 1.1rem;
-	transition: transform 0.2s ease;
-}
+
 
 .btn-elegans:hover,
 .btn-elegans:focus {
@@ -465,6 +462,7 @@ main > section + section {
 	border-color: #9a7438;
 	box-shadow: 0 0.5rem 1rem rgba(23, 50, 77, 0.24);
 	color: #fff;
+	text-decoration: none;
 	transform: translateY(-2px);
 }
 
@@ -513,9 +511,6 @@ main > section + section {
 	transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.terkep-hivatkozas::after {
-	content: "->";
-}
 
 .terkep-hivatkozas:hover,
 .terkep-hivatkozas:focus-visible {
@@ -533,7 +528,7 @@ main > section + section {
 	width: 100%;
 }
 
-.kapcsolat-oldal > section {
+.kapcsolat-oldal>section {
 	border: 0;
 	margin: 0;
 }
@@ -611,7 +606,7 @@ main > section + section {
 	height: clamp(320px, 42vw, 520px);
 }
 
-.kapcsolat-oldal + .oldal-footer {
+.kapcsolat-oldal+.oldal-footer {
 	border-top: 3px solid var(--gold);
 	margin-top: 0;
 }
@@ -622,7 +617,7 @@ main > section + section {
 	margin-top: 4rem;
 }
 
-.ingatlan-oldal + .oldal-footer {
+.ingatlan-oldal+.oldal-footer {
 	border-top: 3px solid var(--gold);
 	margin-top: 0;
 }
@@ -684,7 +679,7 @@ main > section + section {
 }
 
 /* Reusable layout and components for legal specialty pages. */
-.szak-oldal > section {
+.szak-oldal>section {
 	border: 0;
 	margin: 0;
 }
@@ -889,7 +884,7 @@ main > section + section {
 	margin-bottom: 1.5rem;
 }
 
-.szak-oldal + .oldal-footer {
+.szak-oldal+.oldal-footer {
 	border-top: 3px solid var(--gold);
 	margin-top: 0;
 }
@@ -905,4 +900,1075 @@ main > section + section {
 		top: -170px;
 		width: 260px;
 	}
+}
+
+/* The homepage uses the dark artwork with a light information panel. */
+.home-hero {
+	background-color: #17324d;
+	background-image: url("assets/hero-jogi-sotet.png");
+	background-position: center left;
+	background-size: cover;
+}
+
+.home-hero::before {
+	background: linear-gradient(90deg, rgba(17,39,59,.03) 0%, rgba(17,39,59,.08) 42%, rgba(17,39,59,.3) 100%);
+}
+
+.home-hero-copy {
+	background: rgba(251,250,247,.96);
+	border: 1px solid rgba(207,181,132,.62);
+	box-shadow: 0 22px 60px rgba(8,27,44,.22);
+	margin-left: auto;
+	max-width: 560px;
+	padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.home-hero-contact {
+	border-top: 1px solid rgba(41,68,93,.15);
+	padding-top: 1.1rem;
+}
+
+@media (max-width: 767.98px) {
+	.home-hero {
+		background-position: left bottom;
+		background-size: auto 52%;
+		min-height: 790px;
+	}
+
+	.home-hero::before {
+		background: linear-gradient(180deg, rgba(23,50,77,0) 44%, rgba(23,50,77,.12) 100%);
+	}
+
+	.home-hero-copy {
+		margin: 2rem auto 0;
+		max-width: 100%;
+		padding: 1.7rem 1.35rem;
+	}
+}
+
+/* Dark legal identity band; all page content remains on a light canvas. */
+body {
+	background-color: #fbfaf7;
+	font-family: "Lato", Arial, sans-serif;
+}
+
+h1, h2, h3, .navbar-brand {
+	font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+.navbar {
+	background: #17324d !important;
+	border: 0 !important;
+	box-shadow: 0 3px 16px rgba(20, 39, 58, .14);
+	min-height: 82px;
+}
+
+.navbar > .container {
+	min-height: 82px;
+}
+
+.navbar-brand {
+	align-items: center;
+	color: #fff !important;
+	display: inline-flex;
+	font-size: 1.34rem;
+	gap: .65rem;
+	letter-spacing: .01em;
+}
+
+.brand-symbol {
+	color: #d3b16e;
+	font-family: "Cormorant Garamond", Georgia, serif;
+	font-size: 2.6rem;
+	font-weight: 500;
+	line-height: .8;
+}
+
+.nav-link {
+	color: rgba(255,255,255,.85) !important;
+	font-size: .96rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+	color: #e0c284 !important;
+}
+
+.nav-link::after {
+	background: #d3b16e;
+}
+
+.navbar-toggler {
+	border-color: rgba(211,177,110,.55);
+}
+
+.navbar-toggler-icon {
+	filter: invert(1);
+}
+
+.navbar-collapse {
+	background: #17324d;
+}
+
+.site-contact-strip {
+	background: #f2f0ea;
+	border-bottom: 1px solid rgba(41,68,93,.12);
+	color: #516273;
+	font-size: .83rem;
+}
+
+.site-contact-inner {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: .4rem 1.5rem;
+	justify-content: space-between;
+	min-height: 42px;
+}
+
+.site-location {
+	color: #796543;
+	font-weight: 600;
+}
+
+.site-contact-links {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: .35rem 1.25rem;
+}
+
+.site-contact-links a {
+	color: #3d5369;
+	text-decoration-color: rgba(185,154,99,.55);
+	text-underline-offset: .2em;
+}
+
+.site-contact-links a:hover,
+.site-contact-links a:focus-visible {
+	color: #8a7046;
+}
+
+.home-hero {
+	background-color: #fbfaf7;
+	background-image: url("assets/hero-jogi-vilagos.png");
+	background-position: center left;
+	background-size: cover;
+}
+
+.home-hero::before {
+	background: linear-gradient(90deg, rgba(251,250,247,0) 0%, rgba(251,250,247,.1) 35%, rgba(251,250,247,.57) 53%, rgba(251,250,247,.94) 100%);
+}
+
+.home-hero h1 span {
+	font-family: "Allura", "Cormorant Garamond", cursive;
+	font-size: .9em;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.home-hero-contact {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .8rem 1.4rem;
+	margin-top: 1.6rem;
+}
+
+.home-hero-contact a {
+	color: #3c536b;
+	display: flex;
+	flex-direction: column;
+	font-size: .97rem;
+	font-weight: 600;
+	text-decoration-color: rgba(185,154,99,.6);
+	text-underline-offset: .2em;
+}
+
+.home-hero-contact a span {
+	color: #8a7046;
+	font-family: "Cormorant Garamond", Georgia, serif;
+	font-size: .9rem;
+	font-weight: 600;
+	letter-spacing: .07em;
+	text-transform: uppercase;
+}
+
+.home-hero-contact a:hover,
+.home-hero-contact a:focus-visible {
+	color: #8a7046;
+}
+
+.szak-hero,
+.kapcsolat-hero,
+.ingatlan-hero {
+	background-color: #fbfaf7;
+	background-image: url("assets/hero-jogi-vilagos.png");
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.szak-hero .container,
+.kapcsolat-hero .container,
+.ingatlan-hero .container {
+	align-items: flex-end;
+	display: flex;
+	flex-direction: column;
+}
+
+.szak-hero-tartalom,
+.kapcsolat-hero .container > *,
+.ingatlan-hero-tartalom {
+	max-width: 55%;
+	width: 100%;
+}
+
+.szak-hero .lead,
+.kapcsolat-hero .lead,
+.ingatlan-hero .lead {
+	color: #4e6073;
+}
+
+.home-about,
+.szak-szolgaltatasok,
+.kapcsolat-adatok,
+.terkep-szekcio,
+.ingatlan-teruletek,
+.szak-hatter-meleg,
+.szak-hatter-szurke,
+.ingatlan-tanacs,
+.kapcsolat-terkep {
+	background-color: #fbfaf7;
+}
+
+@media (max-width: 991.98px) {
+	.navbar-collapse {
+		padding: .35rem .5rem .8rem;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.site-contact-inner {
+		justify-content: center;
+		padding-bottom: .55rem;
+		padding-top: .55rem;
+	}
+
+	.site-contact-links {
+		justify-content: center;
+	}
+
+	.home-hero {
+		background-position: left bottom;
+		background-size: auto 54%;
+	}
+
+	.home-hero::before {
+		background: linear-gradient(180deg, rgba(251,250,247,.98) 0%, rgba(251,250,247,.96) 42%, rgba(251,250,247,.46) 77%, rgba(251,250,247,.1) 100%);
+	}
+
+	.szak-hero,
+	.kapcsolat-hero,
+	.ingatlan-hero {
+		background-position: left bottom;
+		background-size: auto 50%;
+	}
+
+	.szak-hero .container,
+	.kapcsolat-hero .container,
+	.ingatlan-hero .container {
+		align-items: stretch;
+	}
+
+	.szak-hero-tartalom,
+	.kapcsolat-hero .container > *,
+	.ingatlan-hero-tartalom {
+		max-width: 100%;
+	}
+}
+
+/* Refined, light visual identity shared across the existing pages. */
+:root {
+	--navy: #29445d;
+	--gold: #b99a63;
+	--cream: #fbfaf7;
+	--ink: #263b50;
+	--muted: #647384;
+	--line: rgba(41, 68, 93, .13);
+}
+
+body {
+	background: var(--cream);
+	color: var(--ink);
+	font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+	line-height: 1.7;
+}
+
+h1, h2, h3, .navbar-brand {
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: 500;
+	letter-spacing: -.025em;
+}
+
+.navbar {
+	box-shadow: 0 1px 12px rgba(38, 59, 80, .045);
+	min-height: 78px;
+}
+
+.navbar-brand {
+	font-size: 1.14rem;
+	letter-spacing: .005em;
+}
+
+.nav-link {
+	font-size: .93rem;
+	font-weight: 500;
+}
+
+.home-hero {
+	background-color: #fbfaf7;
+	background-image: url("assets/hero-jogi-vilagos.png");
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: clamp(560px, 43vw, 700px);
+	position: relative;
+}
+
+.home-hero::before {
+	background: linear-gradient(90deg, rgba(251,250,247,0) 0%, rgba(251,250,247,.08) 37%, rgba(251,250,247,.54) 53%, rgba(251,250,247,.9) 100%);
+	content: "";
+	inset: 0;
+	position: absolute;
+}
+
+.home-hero-inner {
+	align-items: center;
+	display: flex;
+	min-height: inherit;
+	position: relative;
+	z-index: 1;
+}
+
+.home-hero-copy {
+	margin-left: auto;
+	max-width: 565px;
+	padding: 5rem 0 5rem 2rem;
+}
+
+.home-kicker {
+	color: #8a7046;
+	font-size: .8rem;
+	font-weight: 700;
+	letter-spacing: .16em;
+	margin: 0 0 1rem;
+	text-transform: uppercase;
+}
+
+.home-hero h1 {
+	color: var(--navy);
+	font-size: clamp(2.8rem, 5vw, 4.35rem);
+	line-height: 1.12;
+	margin: 0 0 1.35rem;
+}
+
+.home-hero h1 span {
+	display: block;
+	font-size: .69em;
+	font-style: italic;
+	margin-top: .3rem;
+}
+
+.home-hero-lead {
+	color: #536579;
+	font-size: 1.12rem;
+	line-height: 1.8;
+	max-width: 535px;
+}
+
+.home-hero-actions {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.4rem;
+	margin-top: 2rem;
+}
+
+.btn-elegans {
+	background: var(--navy);
+	border-color: var(--navy);
+	border-radius: 2px;
+	box-shadow: none;
+	font-size: .94rem;
+	letter-spacing: .015em;
+	padding: .85rem 1.3rem;
+}
+
+.btn-elegans:hover,
+.btn-elegans:focus {
+	background: #1f354a;
+	border-color: #1f354a;
+	box-shadow: 0 7px 20px rgba(41, 68, 93, .15);
+}
+
+.home-text-link {
+	color: var(--navy);
+	display: inline-flex;
+	font-size: .96rem;
+	font-weight: 600;
+	gap: .55rem;
+	text-decoration: none;
+	text-underline-offset: .25em;
+}
+
+.home-text-link span {
+	color: #9b7e4a;
+	transition: transform .2s ease;
+}
+
+.home-text-link:hover,
+.home-text-link:focus-visible {
+	color: #8a7046;
+	text-decoration: underline;
+}
+
+.home-text-link:hover span,
+.home-text-link:focus-visible span {
+	transform: translateX(3px);
+}
+
+.home-about {
+	background: #fff;
+	padding: clamp(4rem, 7vw, 6rem) 0;
+}
+
+.home-about-inner {
+	align-items: start;
+	display: grid;
+	gap: clamp(2rem, 7vw, 6rem);
+	grid-template-columns: minmax(180px, .75fr) minmax(0, 1.6fr);
+}
+
+.home-about-label h2,
+.szakiranyok-elozetes h2 {
+	color: var(--navy);
+	font-size: clamp(2rem, 3vw, 2.7rem);
+	margin: 0;
+}
+
+.home-about-label .home-kicker {
+	font-size: .73rem;
+}
+
+.home-about-copy {
+	color: #5b6b7a;
+	max-width: 760px;
+}
+
+.home-about-copy p {
+	line-height: 1.9;
+}
+
+.home-about-intro {
+	color: var(--navy);
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: clamp(1.25rem, 2vw, 1.55rem);
+	line-height: 1.55 !important;
+}
+
+.szakiranyok-elozetes {
+	background: #f3f3f0;
+	border-top: 1px solid var(--line);
+	margin: 0;
+	padding: clamp(4rem, 7vw, 6rem) 0 !important;
+}
+
+.szakiranyok-elozetes h2 {
+	margin-bottom: .8rem;
+}
+
+.szakiranyok-bevezeto {
+	color: var(--muted);
+	font-size: 1.05rem;
+	margin-bottom: 1.8rem;
+}
+
+.szakiranyok-folyam {
+	margin-left: 0;
+	padding: 1.25rem 0 0;
+	width: 100%;
+}
+
+.szakiranyok-track {
+	animation: none;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	width: 100%;
+}
+
+.szakirany-kartya {
+	background: rgba(255,255,255,.86);
+	border: 1px solid var(--line);
+	border-radius: 3px;
+	border-top: 2px solid #c8ad7c;
+	box-shadow: 0 8px 24px rgba(38, 59, 80, .035);
+	height: auto;
+	margin: 0;
+	min-height: 190px;
+	padding: 1.5rem;
+	transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+
+.szakirany-kartya:hover,
+.szakirany-kartya:focus-visible {
+	border-top-color: #8f764b;
+	box-shadow: 0 14px 28px rgba(38, 59, 80, .1);
+	transform: translateY(-3px);
+}
+
+.szakirany-ikon {
+	color: #9e8456;
+	font-size: 1.8rem;
+	margin-bottom: .6rem;
+}
+
+.szakirany-kartya h3 {
+	font-family: "Aptos", "Segoe UI", Arial, sans-serif;
+	font-size: 1.04rem;
+	font-weight: 600;
+	height: auto;
+	line-height: 1.45;
+	text-align: center;
+}
+
+.terkep-szekcio {
+	background: #fff;
+	border-top: 1px solid var(--line);
+	margin-top: 0;
+}
+
+.terkep-szekcio h2,
+.kapcsolat-terkep h2 {
+	font-family: Georgia, "Times New Roman", serif;
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.terkep-hivatkozas {
+	background: var(--navy);
+	border-radius: 2px;
+	font-size: .92rem;
+}
+
+.terkep-beagyazas {
+	border-radius: 3px;
+	box-shadow: 0 8px 30px rgba(38, 59, 80, .08);
+}
+
+.oldal-footer {
+	background: #263c50;
+	border-top: 2px solid #c5a56d;
+	margin-top: 0;
+}
+
+.oldal-footer h2,
+.oldal-footer h3 {
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: 500;
+}
+
+.szakirany-valaszto-kartya,
+.szak-szovegkartya,
+.kapcsolat-adat,
+.ingatlan-szolgaltatas-lista li {
+	border-color: var(--line);
+}
+
+.szak-hero,
+.kapcsolat-hero,
+.ingatlan-hero {
+	background: linear-gradient(115deg, #f2f1ec 0%, #fbfaf7 72%);
+}
+
+.szak-hero h1,
+.kapcsolat-hero h1,
+.ingatlan-hero h1,
+.szakirany-valaszto-fejlec h1 {
+	color: var(--navy);
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: 500;
+}
+
+.szak-kicker,
+.kapcsolat-kicker,
+.szakirany-valaszto-kicker,
+.ingatlan-kicker {
+	color: #8a7046;
+}
+
+@media (max-width: 991.98px) {
+	.szakiranyok-track {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767.98px) {
+	.home-hero {
+		background-position: left bottom;
+		background-size: auto 54%;
+		min-height: 730px;
+	}
+
+	.home-hero::before {
+		background: linear-gradient(180deg, rgba(251,250,247,.98) 0%, rgba(251,250,247,.96) 43%, rgba(251,250,247,.5) 76%, rgba(251,250,247,.14) 100%);
+	}
+
+	.home-hero-inner {
+		align-items: flex-start;
+	}
+
+	.home-hero-copy {
+		margin: 0 auto;
+		max-width: 560px;
+		padding: 4rem 0 0;
+	}
+
+	.home-hero h1 {
+		font-size: clamp(2.6rem, 10vw, 3.6rem);
+	}
+
+	.home-hero-lead {
+		font-size: 1.02rem;
+	}
+
+	.home-about-inner {
+		grid-template-columns: 1fr;
+		gap: 1.4rem;
+	}
+
+	.szakiranyok-track {
+		grid-template-columns: 1fr;
+	}
+
+	.szakirany-kartya {
+		min-height: 155px;
+	}
+}
+
+/* Final brand direction: dark § navigation, light content, inverse homepage hero. */
+body {
+    background-color: #fbfaf7;
+    color: #263b50;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    letter-spacing: -.02em;
+}
+
+.navbar {
+    background: #17324d !important;
+    border: 0 !important;
+    box-shadow: 0 3px 16px rgba(20, 39, 58, .14);
+    min-height: 82px;
+}
+
+.navbar > .container { min-height: 82px; }
+.navbar-brand {
+    align-items: center;
+    color: #fff !important;
+    display: inline-flex;
+    font-size: 1.34rem;
+    gap: .65rem;
+    letter-spacing: .01em;
+}
+.brand-symbol {
+    color: #d3b16e;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: .8;
+}
+.nav-link { color: rgba(255,255,255,.85) !important; }
+.nav-link:hover, .nav-link.active { color: #e0c284 !important; }
+.nav-link::after { background: #d3b16e; }
+.navbar-toggler { border-color: rgba(211,177,110,.55); }
+.navbar-toggler-icon { filter: invert(1); }
+.navbar-collapse { background: #17324d; }
+
+.site-contact-strip {
+    background: #f2f0ea;
+    border-bottom: 1px solid rgba(41,68,93,.12);
+    color: #516273;
+    font-size: .83rem;
+}
+.site-contact-inner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.5rem;
+    justify-content: space-between;
+    min-height: 42px;
+}
+.site-location { color: #796543; font-weight: 600; }
+.site-contact-links { align-items: center; display: flex; flex-wrap: wrap; gap: .35rem 1.25rem; }
+.site-contact-links a {
+    color: #3d5369;
+    text-decoration-color: rgba(185,154,99,.55);
+    text-underline-offset: .2em;
+}
+.site-contact-links a:hover, .site-contact-links a:focus-visible { color: #8a7046; }
+
+.home-hero {
+    background-color: #17324d;
+    background-image: url("assets/hero-jogi-sotet.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.home-hero::before {
+    background: linear-gradient(90deg, rgba(17,39,59,.03) 0%, rgba(17,39,59,.08) 42%, rgba(17,39,59,.3) 100%);
+}
+.home-hero-copy {
+    background: rgba(251,250,247,.97);
+    border: 1px solid rgba(207,181,132,.7);
+    box-shadow: 0 22px 60px rgba(8,27,44,.22);
+    margin-left: auto;
+    max-width: 560px;
+    padding: clamp(2rem, 4vw, 3.5rem);
+}
+.home-hero h1 span {
+    font-family: "Allura", "Cormorant Garamond", cursive;
+    font-size: .9em;
+    font-style: normal;
+    font-weight: 400;
+}
+.home-hero-contact { border-top: 1px solid rgba(41,68,93,.15); padding-top: 1.1rem; }
+.home-hero-contact a { color: #3c536b; }
+.home-hero-contact a:hover, .home-hero-contact a:focus-visible { color: #8a7046; }
+
+.szak-hero, .kapcsolat-hero, .ingatlan-hero {
+    background-color: #fbfaf7;
+    background-image: url("assets/hero-jogi-vilagos.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.szak-hero .container, .kapcsolat-hero .container, .ingatlan-hero .container {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+}
+.szak-hero-tartalom, .kapcsolat-hero .container > *, .ingatlan-hero-tartalom {
+    max-width: 55%;
+    width: 100%;
+}
+.szak-hero .lead, .kapcsolat-hero .lead, .ingatlan-hero .lead { color: #4e6073; }
+.szak-hero h1, .kapcsolat-hero h1, .ingatlan-hero h1, .szakirany-valaszto-fejlec h1 {
+    color: #29445d;
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+.szak-kicker, .kapcsolat-kicker, .szakirany-valaszto-kicker, .ingatlan-kicker { color: #8a7046; }
+.szak-szolgaltatasok, .kapcsolat-adatok, .terkep-szekcio, .ingatlan-teruletek { background-color: #fff; }
+
+@media (max-width: 991.98px) {
+    .navbar-collapse { padding: .35rem .5rem .8rem; }
+}
+@media (max-width: 767.98px) {
+    .site-contact-inner { justify-content: center; padding-bottom: .55rem; padding-top: .55rem; }
+    .site-contact-links { justify-content: center; }
+    .home-hero { background-position: left bottom; background-size: auto 52%; min-height: 790px; }
+    .home-hero::before { background: linear-gradient(180deg, rgba(23,50,77,0) 44%, rgba(23,50,77,.12) 100%); }
+    .home-hero-copy { margin: 2rem auto 0; max-width: 100%; padding: 1.7rem 1.35rem; }
+    .szak-hero, .kapcsolat-hero, .ingatlan-hero { background-position: left bottom; background-size: auto 50%; }
+    .szak-hero .container, .kapcsolat-hero .container, .ingatlan-hero .container { align-items: stretch; }
+    .szak-hero-tartalom, .kapcsolat-hero .container > *, .ingatlan-hero-tartalom { max-width: 100%; }
+}
+
+/* Refinements requested after the first preview. */
+.navbar-brand {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.55rem;
+    font-weight: 600 !important;
+    gap: .75rem;
+}
+
+/* This is a thumbnail of the approved dark illustration, so the mark matches the hero art. */
+.brand-emblem {
+    background-color: #17324d;
+    background-image: url("assets/hero-jogi-sotet.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto 70px;
+    border: 1px solid rgba(211,177,110,.35);
+    display: inline-block;
+    flex: 0 0 64px;
+    height: 64px;
+    width: 64px;
+}
+
+.home-hero h1,
+.home-hero h1 span {
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+.home-hero h1 span {
+    font-size: .78em;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.szakirany-kartya,
+.szakirany-valaszto-kartya {
+    background: #17324d;
+    border: 1px solid rgba(211,177,110,.38);
+    border-top: 3px solid #d3b16e;
+    color: #fff;
+}
+
+.szakiranyok-elozetes {
+	background: #eef1f3;
+}
+.szakirany-kartya h3,
+.szakirany-valaszto-kartya h2,
+.szakirany-valaszto-kartya p {
+    color: #fff;
+}
+.szakirany-ikon,
+.szakirany-valaszto-kartya-jel,
+.szakirany-valaszto-kartya-reszletek {
+    color: #dfc17f;
+}
+.szakirany-kartya:hover,
+.szakirany-kartya:focus-visible,
+.szakirany-valaszto-kartya:hover,
+.szakirany-valaszto-kartya:focus-visible {
+    background: #1d3d5a;
+    border-top-color: #e0c284;
+    color: #fff;
+}
+
+/* Keep the entire drawing visible in the light page headers. */
+.szak-hero,
+.kapcsolat-hero,
+.ingatlan-hero {
+    background-color: #fbfaf7;
+    background-image:
+        linear-gradient(90deg, rgba(251,250,247,0) 0%, rgba(251,250,247,.12) 37%, rgba(251,250,247,.78) 60%, #fbfaf7 82%),
+        url("assets/hero-jogi-vilagos.png");
+    background-position: center, left center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, auto 100%;
+    min-height: 520px;
+}
+
+@media (max-width: 767.98px) {
+    .brand-emblem {
+        background-size: auto 58px;
+        flex-basis: 52px;
+        height: 52px;
+        width: 52px;
+    }
+
+    .navbar-brand { font-size: 1.27rem; }
+
+    .szak-hero,
+    .kapcsolat-hero,
+    .ingatlan-hero {
+        background-image:
+            linear-gradient(180deg, #fbfaf7 0%, rgba(251,250,247,.96) 58%, rgba(251,250,247,.08) 100%),
+            url("assets/hero-jogi-vilagos.png");
+        background-position: center, left bottom;
+        background-size: 100% 100%, auto 250px;
+        min-height: 0;
+    }
+}
+
+/* Refined navigation texture and compact interior-page rhythm. */
+.navbar {
+    background-color: #17324d !important;
+    background-image:
+        linear-gradient(rgba(23, 50, 77, .35), rgba(23, 50, 77, .35)),
+        url("assets/hero-jogi-sotet.png");
+    background-position: center, right center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%, auto 3000px;
+}
+.navbar-collapse { background-color: #17324d; }
+.brand-emblem {
+    background-color: transparent;
+    background-image: url("assets/paragrafus-emblem.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 0;
+    flex-basis: 36px;
+    height: 52px;
+    width: 36px;
+}
+.szakirany-ikon,
+.szakirany-valaszto-kartya-jel {
+    color: #a9bdcc;
+}
+
+/* Interior pages show more of their content without changing the homepage. */
+body:not(.home-site) .navbar,
+body:not(.home-site) .navbar > .container { min-height: 68px; }
+body:not(.home-site) .brand-emblem { height: 46px; }
+body:not(.home-site) .site-contact-inner { min-height: 34px; }
+body:not(.home-site) .szak-hero,
+body:not(.home-site) .kapcsolat-hero,
+body:not(.home-site) .ingatlan-hero {
+    min-height: 375px;
+}
+body:not(.home-site) .szak-hero { padding-top: 2.8rem; padding-bottom: 2.8rem; }
+body:not(.home-site) .kapcsolat-hero { padding-top: 2.6rem; padding-bottom: 2.6rem; }
+body:not(.home-site) .szak-hero h1 { margin-bottom: .8rem; }
+body:not(.home-site) .szak-szekcio { padding-top: 2.75rem; padding-bottom: 2.75rem; }
+body:not(.home-site) .szakirany-valaszto-oldal { padding-top: 2.25rem !important; padding-bottom: 2.75rem !important; }
+body:not(.home-site) .szakirany-valaszto-fejlec { margin-bottom: 1.6rem; }
+body:not(.home-site) .kapcsolat-adatok .container,
+body:not(.home-site) .kapcsolat-terkep .container { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+body:not(.home-site) .oldal-footer .container { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+.rolam-bemutatkozas .szak-szoveg { margin-bottom: 1rem; }
+
+@media (max-width: 767.98px) {
+    body:not(.home-site) .szak-hero,
+    body:not(.home-site) .kapcsolat-hero,
+    body:not(.home-site) .ingatlan-hero { min-height: 0; }
+    body:not(.home-site) .szak-hero { padding-top: 2.1rem; padding-bottom: 2.1rem; }
+    body:not(.home-site) .kapcsolat-hero { padding-top: 2rem; padding-bottom: 2rem; }
+    body:not(.home-site) .szak-szekcio { padding-top: 2.1rem; padding-bottom: 2.1rem; }
+    body:not(.home-site) .navbar-brand { font-size: 1.2rem; gap: .5rem; }
+    body:not(.home-site) .brand-emblem { flex-basis: 30px; height: 42px; width: 30px; }
+}
+
+/* Restore the full-width light marble bands used on the interior headers. */
+.szak-hero,
+.kapcsolat-hero,
+.ingatlan-hero {
+    background-color: #fbfaf7;
+    background-image: url("assets/hero-jogi-vilagos.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 520px;
+}
+.szak-hero .container,
+.kapcsolat-hero .container,
+.ingatlan-hero .container {
+    justify-content: center;
+    min-height: inherit;
+}
+.szak-hero-tartalom,
+.kapcsolat-hero .container > *,
+.ingatlan-hero-tartalom {
+    max-width: 55%;
+}
+body:not(.home-site) .szak-hero,
+body:not(.home-site) .kapcsolat-hero,
+body:not(.home-site) .ingatlan-hero { min-height: 520px; }
+body:not(.home-site) .szak-hero { padding-top: 2.8rem; padding-bottom: 2.8rem; }
+body:not(.home-site) .kapcsolat-hero { padding-top: 2.6rem; padding-bottom: 2.6rem; }
+.rolam-hero { min-height: 650px !important; }
+.rolam-hero .szak-hero-tartalom { max-width: 58%; }
+.bemutatkozas-szakmai-szoveg {
+    color: rgba(23, 50, 77, .82);
+    line-height: 1.65;
+    margin: .85rem 0 0;
+}
+
+@media (max-width: 767.98px) {
+    body:not(.home-site) .szak-hero,
+    body:not(.home-site) .kapcsolat-hero,
+    body:not(.home-site) .ingatlan-hero {
+        background-position: right center;
+        background-size: cover;
+        min-height: 0;
+    }
+    .szak-hero .container,
+    .kapcsolat-hero .container,
+    .ingatlan-hero .container {
+        align-items: stretch;
+        min-height: 0;
+    }
+    .szak-hero-tartalom,
+    .kapcsolat-hero .container > *,
+    .ingatlan-hero-tartalom { max-width: 100%; }
+    .rolam-hero { min-height: 0 !important; }
+    .rolam-hero .szak-hero-tartalom { max-width: 100%; }
+}
+
+/* Final content refinements requested for the homepage and interior navigation. */
+.home-hero h1 span {
+    font-style: normal;
+    font-weight: 500;
+}
+
+.szakterulet-vissza {
+    align-self: flex-end;
+    color: #29445d;
+    display: inline-flex;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    gap: .45rem;
+    line-height: 1.2;
+    margin-bottom: .8rem;
+    text-decoration: none;
+    width: 55%;
+}
+.szakterulet-vissza:hover,
+.szakterulet-vissza:focus-visible {
+    color: #8a7046;
+    text-decoration: underline;
+    text-underline-offset: .2em;
+}
+
+.kapcsolat-hero { min-height: 450px !important; }
+.kapcsolat-hero .container { justify-content: center; }
+.kapcsolat-gyorselerhetosegek {
+    display: grid;
+    gap: .65rem 1.2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 1rem;
+}
+.kapcsolat-gyorselerhetosegek a {
+    color: #29445d;
+    display: flex;
+    flex-direction: column;
+    font-size: .92rem;
+    line-height: 1.35;
+    text-decoration: none;
+}
+.kapcsolat-gyorselerhetosegek a:hover,
+.kapcsolat-gyorselerhetosegek a:focus-visible { color: #8a7046; }
+.kapcsolat-gyorselerhetosegek span {
+    color: #8a7046;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+.kapcsolat-gyorselerhetosegek strong {
+    font-size: .98rem;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+.kapcsolat-gyorselerhetosegek small { color: #667687; font-size: .78rem; }
+
+@media (max-width: 767.98px) {
+    .szakterulet-vissza { align-self: stretch; width: 100%; }
+    .kapcsolat-hero { min-height: 0 !important; }
+    .kapcsolat-gyorselerhetosegek { grid-template-columns: 1fr; }
+}
+
+/* Keep the six practice cards compact enough to scan together on desktop. */
+@media (min-width: 1200px) {
+    .szakirany-valaszto-kartya {
+        min-height: 190px;
+        padding: 1.15rem;
+    }
 }
