@@ -1,0 +1,20 @@
+Dr. László Renáta ügyvédi honlap – arculati előnézet
+
+A csomag a megadott GitHub Pages honlap átdolgozott, előnézeti változata. A meglévő tartalmakat, belső hivatkozásokat és aloldalakat megtartja.
+
+Kért arculati és tartalmi módosítások:
+- minden oldalon sötétkék navigációs sáv, a jóváhagyott rajzolt §-motívummal összehangolt jelképpel;
+- a menüsorrend: Kezdőlap, Rólam, Szakterületek, Ár, Kapcsolat;
+- a kezdőlapon sötét rajzolt háttér és világos adatpanel, egységes Cormorant Garamond betűképpel;
+- a kezdőlapi megnevezés „Egyéni ügyvéd”, a bemutatkozó szöveg magánszemélyeket és jogi személyeket említ;
+- hat, egységes szakterületi kártya; a cégalapítás, cégmódosítás, vállalkozási támogatás és cégképviselet egy közös kategóriába került;
+- a szakterület-oldal világos háttere és sötétkék kártyái;
+- világos, teljes szélességű márványos belső oldali sávok nagy, részben vágott paragrafusjel-mérleg motívummal;
+- a szakterületi visszalépő linkek a márványos fejlécbe kerültek;
+- a Kapcsolat oldalon a kattintható telefonszám és e-mail-cím a bevezető alatt, egymás mellett látható;
+- Lato törzsszöveg és egységes Cormorant Garamond címsorok a teljes webhelyen.
+
+A megadott honlapon a székhely csak Dunaújvárosként szerepel, utcacím nélkül; a csomag nem egészíti ki kitalált címmel.
+
+Megtekintés: kicsomagolás után nyisd meg az index.html fájlt böngészőben.
+A csomag előnézet; az éles GitHub Pages webhelyet nem módosítja.
